@@ -36,5 +36,9 @@ class Users {
     public function logout() {
         
     }
+    
+    public function get_userId($username) {
+        
+    }
 }
 ?>
