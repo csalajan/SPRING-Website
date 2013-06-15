@@ -17,6 +17,8 @@ class Users {
             if ($password == $user['0']->client_password) {
                 $data = array(
                               'username'    =>  $username,
+                              'id'          =>  $user['0']->client_id,
+                              'company_name'=>  $user['0']->client_name,
                               'is_loggedIn' =>  true
                 );
                 
@@ -40,6 +42,13 @@ class Users {
     }
     
     public function get_userId($username) {
+
+        $this->CI->db->where('client_email', $username);
+        $raw = $this->CI->db->get('clients');
+
+        $result = $raw->result();
+        return $result['0']->id;
+
         
     }
 }
