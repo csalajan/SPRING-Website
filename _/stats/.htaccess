@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "spring215.com Statistics"
+AuthUserFile /var/chroot/home/content/55/11320655/html/stats/.statspwd
+Require valid-user
+DirectoryIndex index.html
