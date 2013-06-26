@@ -3,6 +3,30 @@
 	{
 		"selected_items":
 		[
+			[
+				"chg",
+				"chg_password"
+			],
+			[
+				"passwor",
+				"client_password"
+			],
+			[
+				"compan",
+				"company_name"
+			],
+			[
+				"cust",
+				"customer_name"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"creat",
+				"create_hash"
+			]
 		]
 	},
 	"buffers":
@@ -11,9 +35,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 117.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"p",
 				"Package Control: Install Package"
@@ -51,7 +83,7 @@
 				"Github: Open File"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -68,6 +100,35 @@
 	},
 	"file_history":
 	[
+		"/home/craig/SPRING/application/controllers/home.php",
+		"/home/craig/SPRING/application/views/core/header.php",
+		"/home/craig/SPRING/ftpsync.settings",
+		"/home/craig/SPRING/application/views/services.php",
+		"/home/craig/SPRING/application/controllers/admin.php",
+		"/home/craig/SPRING/application/controllers/client.php",
+		"/home/craig/SPRING/application/views/email/new_client.php",
+		"/home/craig/SPRING/application/views/admin/main.php",
+		"/home/craig/SPRING/application/config/routes.php",
+		"/home/craig/SPRING/application/libraries/Users.php",
+		"/home/craig/SPRING/application/views/clients/password.php",
+		"/home/craig/SPRING/application/views/admin/core/header.php",
+		"/home/craig/SPRING/.htaccess",
+		"/opt/lampp/htdocs/test.php",
+		"/home/craig/SPRING/application/views/main.php",
+		"/home/craig/SPRING/application/views/core/banner.php",
+		"/home/craig/SPRING/application/views/core/footer.php",
+		"/home/craig/SPRING/application/views/clients/core/footer.php",
+		"/home/craig/SPRING/application/views/admin/core/footer.php",
+		"/home/craig/SPRING/application/views/contact.php",
+		"/home/craig/SPRING/application/config/database.php",
+		"/home/craig/SPRING/application/views/about.php",
+		"/home/craig/SPRING/application/views/team.php",
+		"/home/craig/SPRING/application/views/clients/core/header.php",
+		"/home/craig/SPRING/application/views/admin/add_client.php",
+		"/home/craig/SPRING/application/views/clients/login.php",
+		"/home/craig/SPRING/application/views/clients/profile.php",
+		"/home/craig/SPRING/application/views/clients/project.php",
+		"/home/craig/SPRING/css/client-style.css",
 		"/home/craig/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
 		"/home/craig/.config/sublime-text-2/Packages/User/Git.sublime-settings"
 	],
@@ -115,7 +176,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
