@@ -3,7 +3,7 @@
 		<section class="sixteen columns alpha">
 			<article class="thirteen columns offset-by-four alpha contact-page">
 				<h2>Lets chat</h2>
-				<?php if (isset($message)) echo "<p>" . $message . "</p>"; ?>
+				<?php if (isset($message)) echo '<p class="client-contact-submission-success">' . $message . "</p>"; ?>
 				<?php echo form_open('home/contact_submit', array('class' => 'customer-contact-form')); ?>
 					<h3>General Inquiries</h3>
 					<p>Drop us a line and let us know a little about yourself and your goals for your branding, print, or web project. We'll get back to you within 24 hours.</p>

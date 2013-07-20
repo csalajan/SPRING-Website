@@ -18,7 +18,7 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/main.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
 
 
 	<!--[if lt IE 9]>
@@ -49,7 +49,7 @@
 	<header class="container">
 		<section class="sixteen columns alpha omega">
 			<nav class="four columns alpha">
-				<?php echo anchor('home', '<img class="logo" src="'.base_url().'images/spring215-logo.png" alt="SPRING Creative Group\'s logo on the www.spring215.com website">', array('class' => 'four columns', 'title' => 'SPRING Creative Group\'s Home Page')); ?>
+				<?php echo anchor('', '<img class="logo" src="'.base_url().'images/spring215-logo.png" alt="SPRING Creative Group\'s logo on the www.spring215.com website">', array('class' => 'four columns', 'title' => 'SPRING Creative Group\'s Home Page')); ?>
 			</nav>
 			<nav class="social-links twelve columns omega">
 				<a class="inactive" href="https://www.facebook.com/pages/Spring-Creative-Group/637144592980321" title="SPRING Creative Group's Facebook page"><i class="foundicon-facebook"></i></a>
@@ -60,11 +60,11 @@
 				<?php echo anchor('client', 'client login', array('class' => 'four columns alpha omega', 'title' => 'Login to view client files')); ?>
 			</nav>
 			<nav class="global-nav twelve columns offset-by-two omega">
-				<?php echo anchor('home/services','services', array('class' => 'two columns alpha', 'title' => 'Services provided by the SPRING Creative Group')); ?>
-				<?php echo anchor('home/about','about', array('class' => 'two columns', 'title' => 'Information about the SPRING Creative Group')); ?>
-				<?php echo anchor('home/contact','contact', array('class' => 'two columns', 'title' => 'Contact information for teh SPRING Creative Group')); ?>
-				<?php echo anchor('home/team','team', array('class' => 'two columns', 'title' => 'The SPRING Creative Group Team Members')); ?>
-				<?php echo anchor('home/blog','blog', array('class' => 'two columns omega', 'title' => 'SPRING Creative Group\'s Blog')); ?>
+				<?php echo anchor('services','services', array('class' => 'two columns alpha', 'title' => 'Services provided by the SPRING Creative Group')); ?>
+				<?php echo anchor('about','about', array('class' => 'two columns', 'title' => 'Information about the SPRING Creative Group')); ?>
+				<?php echo anchor('contact','contact', array('class' => 'two columns', 'title' => 'Contact information for teh SPRING Creative Group')); ?>
+				<?php echo anchor('team','team', array('class' => 'two columns', 'title' => 'The SPRING Creative Group Team Members')); ?>
+				<?php echo anchor('blog','blog', array('class' => 'two columns omega', 'title' => 'SPRING Creative Group\'s Blog')); ?>
 			</nav>
 		</section>
 	</header>

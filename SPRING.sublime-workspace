@@ -1,0 +1,513 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"start",
+				"start_date"
+			],
+			[
+				"api_",
+				"api_call"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n\nclass Admin extends CI_Controller {\n\n	public function __construct() {\n		parent::__construct();\n\n		$this->data = new stdClass;\n        $this->user = new stdClass;\n\n		$this->user->loggedIn = $this->session->userdata('is_loggedIn');\n        if ($this->user->loggedIn == true) {\n            $this->user->client = $this->session->userdata('username');\n            $this->user->name = $this->session->userdata('company_name');\n        }\n	}\n\n	public function index() {\n		if ($this->user->loggedIn == false) {\n            redirect('client');\n        }\n\n        $where = array(\n        			   'is_admin'	=>	0,\n        			   'archived'	=>	0\n        			   );\n        $this->db->where($where);\n        $data = $this->db->get('clients');\n        $this->data->clients = $data->result();\n\n        $where = array(\n        			   'is_admin'	=>	0,\n        			   'archived'	=>	1\n        			   );\n        $this->db->where($where);\n        $raw = $this->db->get('clients');\n        if ($raw->num_rows() != 0) {\n        	$this->data->archived = $raw->result();\n        } else {\n        	$this->data->archived = array();\n        }\n\n		$this->load->helper('form');\n\n		$this->load->view('admin/core/header', $this->user);\n		$this->load->view('admin/main', $this->data);\n		$this->load->view('admin/core/footer');\n	}\n\n	public function add_client() {\n		$this->load->library('form_validation');\n		$this->load->helper('string');\n		\n		$mailConfig['mailpath'] = \"/usr/sbin/sendmail\";\n		$mailConfig['protocol'] = 'sendmail';\n		$mailConfig['smtp_host'] = 'smtpout.secureserver.net';\n		$mailConfig['smtp_user'] = 'info@spring215.com';\n		$mailConfig['smtp_pass'] = 'spring215';\n		$mailConfig['smtp_port'] = '465';\n		$mailConfig['mailtype'] = 'html';\n		$this->load->library('email', $mailConfig);\n\n		// Create Random Password, Create Random Salt String, and hash password for database entry\n		$client_password = random_string('alnum', 8);\n		$client_salt = random_string('alnum', 6);\n		$client_hash = hash('sha256', $client_salt . $client_password);\n\n		// Build Database insert array\n		$data = array(\n					  'client_name'		=>	$this->input->post('clientname'),\n					  'client_email'	=>	$this->input->post('clientemail'),\n					  'client_password'	=>	$client_hash,\n					  'client_salt'		=>	$client_salt,\n					  'contact_name'	=>	$this->input->post('contactname'),\n					  'contact_email'	=>	$this->input->post('contactemail'),\n					  'contact_phone'	=>	$this->input->post('contactphone')\n			);\n		// Check if new client is SPRING Employee\n		if ($this->input->post('is_admin') == true) {\n			$data['is_admin'] = 1;\n		}\n\n\n		// Check project information\n		if ($this->input->post('branding') == true) {\n			$data['branding'] = 1;\n		}\n		if ($this->input->post('print') == true) {\n			$data['print'] = 1;\n		}\n		if ($this->input->post('design') == true) {\n			$data['design'] = 1;\n		}\n		if ($this->input->post('development') == true) {\n			$data['development'] = 1;\n		}\n\n		// Insert information into database\n		$this->db->insert('clients', $data);\n		$email = new stdClass;\n		$email->username = $data['client_email'];\n		$email->password = $client_password;\n		$message = $this->load->view('email/new_client', $email, TRUE);\n\n		// Send Email to client with new password\n		$this->email->from('info@spring215.com', 'SPRING Creative Group');\n		$this->email->to($data['client_email']);\n		$this->email->subject('Your account information at SPRING215.com');\n		$this->email->message($message);\n		$this->email->send();\n\n		redirect('admin');\n\n\n\n\n	}\n\n	public function archive($archive, $id) {\n\n		$data = array('archived'	=>	$archive);\n		$this->db->where('id', $id);\n		$this->db->update('clients', $data);\n\n		redirect('admin');\n	}\n}",
+			"file": "application/controllers/admin.php",
+			"file_size": 3778,
+			"file_write_time": 1372734062000000,
+			"settings":
+			{
+				"buffer_size": 3736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/admin/main.php",
+			"settings":
+			{
+				"buffer_size": 5495,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/controllers/home.php",
+			"settings":
+			{
+				"buffer_size": 7657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/email/client-lead-response.php",
+			"settings":
+			{
+				"buffer_size": 1989,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/config/routes.php",
+			"settings":
+			{
+				"buffer_size": 1741,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/core/header.php",
+			"settings":
+			{
+				"buffer_size": 3820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/core/footer.php",
+			"settings":
+			{
+				"buffer_size": 3324,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/core/banner.php",
+			"settings":
+			{
+				"buffer_size": 440,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/errors/404.php",
+			"settings":
+			{
+				"buffer_size": 893,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git p",
+				"Git: Push"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git add .",
+				"Git: Add..."
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"g",
+				"Github: Open File"
+			],
+			[
+				"",
+				"Github: Open File"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/craig/SPRING/images/favicon.ico",
+		"/home/craig/SPRING/ftpsync.settings",
+		"/opt/lampp/htdocs/labaide/app/partials/timesheets/periods.html",
+		"/home/craig/labaide/app/labaide.sublime-project",
+		"/opt/lampp/htdocs/labaide/app/partials/timesheets/home.html",
+		"/opt/lampp/htdocs/labaide/app/partials/timesheets/admin.html",
+		"/opt/lampp/htdocs/labaide/app/js/controllers.js",
+		"/home/craig/labaide/app/index.html",
+		"/opt/lampp/htdocs/labaide/app/js/app.js",
+		"/opt/lampp/htdocs/labaide/app/partials/timesheets/adminperiods.html",
+		"/home/craig/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+		"/home/craig/.config/sublime-text-2/Packages/User/Git.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"response"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/controllers/admin.php",
+					"settings":
+					{
+						"buffer_size": 3736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1173.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/admin/main.php",
+					"settings":
+					{
+						"buffer_size": 5495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								671,
+								671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/controllers/home.php",
+					"settings":
+					{
+						"buffer_size": 7657,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7530,
+								7530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2652.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/views/email/client-lead-response.php",
+					"settings":
+					{
+						"buffer_size": 1989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1047,
+								1047
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 96.0,
+						"translation.y": 561.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/config/routes.php",
+					"settings":
+					{
+						"buffer_size": 1741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1473,
+								1473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/views/core/header.php",
+					"settings":
+					{
+						"buffer_size": 3820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2041,
+								2041
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 357.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/views/core/footer.php",
+					"settings":
+					{
+						"buffer_size": 3324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								947,
+								947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/views/core/banner.php",
+					"settings":
+					{
+						"buffer_size": 440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/views/errors/404.php",
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								621,
+								621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 200.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,2187 @@
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, ../scss/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, ../scss/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, ../scss/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, ../scss/normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, ../scss/normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 74, ../scss/normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, ../scss/normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, ../scss/normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, ../scss/normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, ../scss/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 126, ../scss/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, ../scss/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, ../scss/normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, ../scss/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 164, ../scss/normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, ../scss/normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, ../scss/normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, ../scss/normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 198, ../scss/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 205, ../scss/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 209, ../scss/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, ../scss/normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, ../scss/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, ../scss/normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, ../scss/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, ../scss/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 278, ../scss/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 290, ../scss/normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 302, ../scss/normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 317, ../scss/normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 327, ../scss/normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 337, ../scss/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, ../scss/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 361, ../scss/normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 370, ../scss/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, ../scss/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, ../scss/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+/* #Base 960 Grid
+================================================== */
+/* line 24, ../scss/skeleton.scss */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* line 26, ../scss/skeleton.scss */
+.container .column,
+.container .columns {
+  float: left;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Nested Column Classes */
+/* line 29, ../scss/skeleton.scss */
+.column.alpha, .columns.alpha {
+  margin-left: 0;
+}
+
+/* line 30, ../scss/skeleton.scss */
+.column.omega, .columns.omega {
+  margin-right: 0;
+}
+
+/* Base Grid */
+/* line 34, ../scss/skeleton.scss */
+.container .one.column,
+.container .one.columns {
+  width: 40px;
+}
+
+/* line 35, ../scss/skeleton.scss */
+.container .two.columns {
+  width: 100px;
+}
+
+/* line 36, ../scss/skeleton.scss */
+.container .three.columns {
+  width: 160px;
+}
+
+/* line 37, ../scss/skeleton.scss */
+.container .four.columns {
+  width: 220px;
+}
+
+/* line 38, ../scss/skeleton.scss */
+.container .five.columns {
+  width: 280px;
+}
+
+/* line 39, ../scss/skeleton.scss */
+.container .six.columns {
+  width: 340px;
+}
+
+/* line 40, ../scss/skeleton.scss */
+.container .seven.columns {
+  width: 400px;
+}
+
+/* line 41, ../scss/skeleton.scss */
+.container .eight.columns {
+  width: 460px;
+}
+
+/* line 42, ../scss/skeleton.scss */
+.container .nine.columns {
+  width: 520px;
+}
+
+/* line 43, ../scss/skeleton.scss */
+.container .ten.columns {
+  width: 580px;
+}
+
+/* line 44, ../scss/skeleton.scss */
+.container .eleven.columns {
+  width: 640px;
+}
+
+/* line 45, ../scss/skeleton.scss */
+.container .twelve.columns {
+  width: 700px;
+}
+
+/* line 46, ../scss/skeleton.scss */
+.container .thirteen.columns {
+  width: 760px;
+}
+
+/* line 47, ../scss/skeleton.scss */
+.container .fourteen.columns {
+  width: 820px;
+}
+
+/* line 48, ../scss/skeleton.scss */
+.container .fifteen.columns {
+  width: 880px;
+}
+
+/* line 49, ../scss/skeleton.scss */
+.container .sixteen.columns {
+  width: 940px;
+}
+
+/* line 51, ../scss/skeleton.scss */
+.container .one-third.column {
+  width: 300px;
+}
+
+/* line 52, ../scss/skeleton.scss */
+.container .two-thirds.column {
+  width: 620px;
+}
+
+/* Offsets */
+/* line 55, ../scss/skeleton.scss */
+.container .offset-by-one {
+  padding-left: 60px;
+}
+
+/* line 56, ../scss/skeleton.scss */
+.container .offset-by-two {
+  padding-left: 120px;
+}
+
+/* line 57, ../scss/skeleton.scss */
+.container .offset-by-three {
+  padding-left: 180px;
+}
+
+/* line 58, ../scss/skeleton.scss */
+.container .offset-by-four {
+  padding-left: 240px;
+}
+
+/* line 59, ../scss/skeleton.scss */
+.container .offset-by-five {
+  padding-left: 300px;
+}
+
+/* line 60, ../scss/skeleton.scss */
+.container .offset-by-six {
+  padding-left: 360px;
+}
+
+/* line 61, ../scss/skeleton.scss */
+.container .offset-by-seven {
+  padding-left: 420px;
+}
+
+/* line 62, ../scss/skeleton.scss */
+.container .offset-by-eight {
+  padding-left: 480px;
+}
+
+/* line 63, ../scss/skeleton.scss */
+.container .offset-by-nine {
+  padding-left: 540px;
+}
+
+/* line 64, ../scss/skeleton.scss */
+.container .offset-by-ten {
+  padding-left: 600px;
+}
+
+/* line 65, ../scss/skeleton.scss */
+.container .offset-by-eleven {
+  padding-left: 660px;
+}
+
+/* line 66, ../scss/skeleton.scss */
+.container .offset-by-twelve {
+  padding-left: 720px;
+}
+
+/* line 67, ../scss/skeleton.scss */
+.container .offset-by-thirteen {
+  padding-left: 780px;
+}
+
+/* line 68, ../scss/skeleton.scss */
+.container .offset-by-fourteen {
+  padding-left: 840px;
+}
+
+/* line 69, ../scss/skeleton.scss */
+.container .offset-by-fifteen {
+  padding-left: 900px;
+}
+
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 79, ../scss/skeleton.scss */
+  .container {
+    width: 768px;
+  }
+
+  /* line 81, ../scss/skeleton.scss */
+  .container .column,
+  .container .columns {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* line 82, ../scss/skeleton.scss */
+  .column.alpha, .columns.alpha {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  /* line 83, ../scss/skeleton.scss */
+  .column.omega, .columns.omega {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  /* line 84, ../scss/skeleton.scss */
+  .alpha.omega {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 87, ../scss/skeleton.scss */
+  .container .one.column,
+  .container .one.columns {
+    width: 28px;
+  }
+
+  /* line 88, ../scss/skeleton.scss */
+  .container .two.columns {
+    width: 76px;
+  }
+
+  /* line 89, ../scss/skeleton.scss */
+  .container .three.columns {
+    width: 124px;
+  }
+
+  /* line 90, ../scss/skeleton.scss */
+  .container .four.columns {
+    width: 172px;
+  }
+
+  /* line 91, ../scss/skeleton.scss */
+  .container .five.columns {
+    width: 220px;
+  }
+
+  /* line 92, ../scss/skeleton.scss */
+  .container .six.columns {
+    width: 268px;
+  }
+
+  /* line 93, ../scss/skeleton.scss */
+  .container .seven.columns {
+    width: 316px;
+  }
+
+  /* line 94, ../scss/skeleton.scss */
+  .container .eight.columns {
+    width: 364px;
+  }
+
+  /* line 95, ../scss/skeleton.scss */
+  .container .nine.columns {
+    width: 412px;
+  }
+
+  /* line 96, ../scss/skeleton.scss */
+  .container .ten.columns {
+    width: 460px;
+  }
+
+  /* line 97, ../scss/skeleton.scss */
+  .container .eleven.columns {
+    width: 508px;
+  }
+
+  /* line 98, ../scss/skeleton.scss */
+  .container .twelve.columns {
+    width: 556px;
+  }
+
+  /* line 99, ../scss/skeleton.scss */
+  .container .thirteen.columns {
+    width: 604px;
+  }
+
+  /* line 100, ../scss/skeleton.scss */
+  .container .fourteen.columns {
+    width: 652px;
+  }
+
+  /* line 101, ../scss/skeleton.scss */
+  .container .fifteen.columns {
+    width: 700px;
+  }
+
+  /* line 102, ../scss/skeleton.scss */
+  .container .sixteen.columns {
+    width: 748px;
+  }
+
+  /* line 104, ../scss/skeleton.scss */
+  .container .one-third.column {
+    width: 236px;
+  }
+
+  /* line 105, ../scss/skeleton.scss */
+  .container .two-thirds.column {
+    width: 492px;
+  }
+
+  /* Offsets */
+  /* line 108, ../scss/skeleton.scss */
+  .container .offset-by-one {
+    padding-left: 48px;
+  }
+
+  /* line 109, ../scss/skeleton.scss */
+  .container .offset-by-two {
+    padding-left: 96px;
+  }
+
+  /* line 110, ../scss/skeleton.scss */
+  .container .offset-by-three {
+    padding-left: 144px;
+  }
+
+  /* line 111, ../scss/skeleton.scss */
+  .container .offset-by-four {
+    padding-left: 192px;
+  }
+
+  /* line 112, ../scss/skeleton.scss */
+  .container .offset-by-five {
+    padding-left: 240px;
+  }
+
+  /* line 113, ../scss/skeleton.scss */
+  .container .offset-by-six {
+    padding-left: 288px;
+  }
+
+  /* line 114, ../scss/skeleton.scss */
+  .container .offset-by-seven {
+    padding-left: 336px;
+  }
+
+  /* line 115, ../scss/skeleton.scss */
+  .container .offset-by-eight {
+    padding-left: 384px;
+  }
+
+  /* line 116, ../scss/skeleton.scss */
+  .container .offset-by-nine {
+    padding-left: 432px;
+  }
+
+  /* line 117, ../scss/skeleton.scss */
+  .container .offset-by-ten {
+    padding-left: 480px;
+  }
+
+  /* line 118, ../scss/skeleton.scss */
+  .container .offset-by-eleven {
+    padding-left: 528px;
+  }
+
+  /* line 119, ../scss/skeleton.scss */
+  .container .offset-by-twelve {
+    padding-left: 576px;
+  }
+
+  /* line 120, ../scss/skeleton.scss */
+  .container .offset-by-thirteen {
+    padding-left: 624px;
+  }
+
+  /* line 121, ../scss/skeleton.scss */
+  .container .offset-by-fourteen {
+    padding-left: 672px;
+  }
+
+  /* line 122, ../scss/skeleton.scss */
+  .container .offset-by-fifteen {
+    padding-left: 720px;
+  }
+}
+/*  #Mobile (Portrait)
+================================================== */
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+  /* line 132, ../scss/skeleton.scss */
+  .container {
+    width: 300px;
+  }
+
+  /* line 134, ../scss/skeleton.scss */
+  .container .columns,
+  .container .column {
+    margin: 0;
+  }
+
+  /* line 154, ../scss/skeleton.scss */
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 300px;
+  }
+
+  /* Offsets */
+  /* line 171, ../scss/skeleton.scss */
+  .container .offset-by-one,
+  .container .offset-by-two,
+  .container .offset-by-three,
+  .container .offset-by-four,
+  .container .offset-by-five,
+  .container .offset-by-six,
+  .container .offset-by-seven,
+  .container .offset-by-eight,
+  .container .offset-by-nine,
+  .container .offset-by-ten,
+  .container .offset-by-eleven,
+  .container .offset-by-twelve,
+  .container .offset-by-thirteen,
+  .container .offset-by-fourteen,
+  .container .offset-by-fifteen {
+    padding-left: 0;
+  }
+}
+/* #Mobile (Landscape)
+================================================== */
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 182, ../scss/skeleton.scss */
+  .container {
+    width: 420px;
+  }
+
+  /* line 184, ../scss/skeleton.scss */
+  .container .columns,
+  .container .column {
+    margin: 0;
+  }
+
+  /* line 204, ../scss/skeleton.scss */
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .four.columns,
+  .container .five.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .sixteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
+    width: 420px;
+  }
+}
+/* #Clearing
+================================================== */
+/* Self Clearing Goodness */
+/* line 212, ../scss/skeleton.scss */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Use clearfix class on parent to clear nested columns,
+or wrap each row of columns in a <div class="row"> */
+/* line 219, ../scss/skeleton.scss */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* line 227, ../scss/skeleton.scss */
+.row:after,
+.clearfix:after {
+  clear: both;
+}
+
+/* line 230, ../scss/skeleton.scss */
+.row,
+.clearfix {
+  zoom: 1;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+/* line 234, ../scss/skeleton.scss */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc */
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+/* line 18, ../scss/base.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../scss/base.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*
+  font-size: 100%;
+  */
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 29, ../scss/base.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/base.scss */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../scss/base.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 35, ../scss/base.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* #Basic Styles
+================================================== */
+/* line 42, ../scss/base.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* #Links
+================================================== */
+/* line 53, ../scss/base.scss */
+a, a:visited {
+  outline: 0;
+}
+
+/* line 55, ../scss/base.scss */
+p a, p a:visited {
+  line-height: inherit;
+}
+
+/* #Lists
+================================================== */
+/* line 61, ../scss/base.scss */
+ul, ol {
+  margin-bottom: 20px;
+}
+
+/* line 62, ../scss/base.scss */
+ul {
+  list-style: none outside;
+}
+
+/* line 63, ../scss/base.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 64, ../scss/base.scss */
+ol, ul.square, ul.circle, ul.disc {
+  margin-left: 30px;
+}
+
+/* line 65, ../scss/base.scss */
+ul.square {
+  list-style: square outside;
+}
+
+/* line 66, ../scss/base.scss */
+ul.circle {
+  list-style: circle outside;
+}
+
+/* line 67, ../scss/base.scss */
+ul.disc {
+  list-style: disc outside;
+}
+
+/* line 69, ../scss/base.scss */
+ul ul, ul ol,
+ol ol, ol ul {
+  margin: 4px 0 5px 30px;
+  font-size: 90%;
+}
+
+/* line 71, ../scss/base.scss */
+ul ul li, ul ol li,
+ol ol li, ol ul li {
+  margin-bottom: 6px;
+}
+
+/* line 72, ../scss/base.scss */
+li {
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+/* line 73, ../scss/base.scss */
+ul.large li {
+  line-height: 21px;
+}
+
+/* line 74, ../scss/base.scss */
+li p {
+  line-height: 21px;
+}
+
+/* #Images
+================================================== */
+/* line 79, ../scss/base.scss */
+img.scale-with-grid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 84, ../scss/base.scss */
+.form-button {
+  border: 0px solid #fff;
+}
+
+/* #Forms
+================================================== */
+/* line 93, ../scss/base.scss */
+input {
+  width: 100%;
+  margin-bottom: .5em;
+  font-size: .8em;
+  height: 40px;
+  padding-left: 2%;
+}
+
+/* #Misc
+================================================== */
+/* line 104, ../scss/base.scss */
+.remove-bottom {
+  margin-bottom: 0 !important;
+}
+
+/* line 105, ../scss/base.scss */
+.half-bottom {
+  margin-bottom: 10px !important;
+}
+
+/* line 106, ../scss/base.scss */
+.add-bottom {
+  margin-bottom: 20px !important;
+}
+
+/* ====== Color Variables ====== */
+/* For Red Backgrounds, Links */
+/* For Footer Background */
+/* For Header text, bolded text */
+/* For body paragraph text */
+/* For link buttons with on colored backgrounds */
+/* For text with color backgrounds text */
+/* ====== Color Styles ======*/
+/* === Global Colors ===*/
+/* Text Color */
+/* line 27, ../scss/color.scss */
+h1, h2, h3, h4, h5, h5 {
+  color: #666666;
+}
+
+/* line 32, ../scss/color.scss */
+p {
+  color: #777777;
+}
+
+/* line 37, ../scss/color.scss */
+a {
+  color: #ee3c2d;
+}
+
+/* line 42, ../scss/color.scss */
+a:hover {
+  transition: color 0.5s ease;
+  color: #777777;
+}
+
+/* line 48, ../scss/color.scss */
+strong {
+  color: #666666;
+}
+
+/* Background Color */
+/* === Header Specific Colors ===*/
+/* Text Color */
+/* Background Color */
+/* line 61, ../scss/color.scss */
+.social-links a {
+  color: #ee3c2d;
+  opacity: .25;
+}
+/* line 67, ../scss/color.scss */
+.social-links a:hover {
+  color: #ee3c2d;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* line 74, ../scss/color.scss */
+.client-login a {
+  color: #ee3c2d;
+}
+
+/* line 80, ../scss/color.scss */
+.global-nav a {
+  /* border-bottom: .1em solid $red; */
+  background: white;
+  color: #ee3c2d;
+}
+/* line 87, ../scss/color.scss */
+.global-nav a:hover {
+  background: #ee3c2d;
+  color: white;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+/* line 106, ../scss/color.scss */
+.local-nav ul li ul li a {
+  color: #333333;
+}
+/* line 111, ../scss/color.scss */
+.local-nav ul li ul li a:hover {
+  transition: color 0.5s ease;
+  color: #777777;
+}
+
+/* === Body Specific Colors ===*/
+/* Text Color */
+/* line 127, ../scss/color.scss */
+.red h1, .red h2, .red h3, .red h4, .red h5, .red h5, .title-section h1, .title-section h2, .title-section h3, .title-section h4, .title-section h5, .title-section h5 {
+  color: white;
+}
+/* line 132, ../scss/color.scss */
+.red a, .title-section a {
+  color: #ee3c2d;
+}
+/* line 137, ../scss/color.scss */
+.red a:hover, .title-section a:hover {
+  color: #ee3c2d;
+}
+
+/* line 147, ../scss/color.scss */
+.gray h1, .gray h2, .gray h3, .gray h4, .gray h5, .gray h5 {
+  color: white;
+}
+/* line 152, ../scss/color.scss */
+.gray p {
+  color: white;
+}
+
+/* Background Color */
+/* line 160, ../scss/color.scss */
+.red {
+  background: #ee3c2d;
+}
+/* line 164, ../scss/color.scss */
+.red a {
+  background: white;
+}
+/* line 169, ../scss/color.scss */
+.red a:hover {
+  transition: background 0.5s ease;
+  background: #dddddd;
+}
+
+/* line 179, ../scss/color.scss */
+.white .client-contact-submission-success {
+  color: #ee3c2d;
+}
+/* line 184, ../scss/color.scss */
+.white li {
+  color: #777777;
+}
+/* line 189, ../scss/color.scss */
+.white h3 {
+  color: #ee3c2d;
+}
+/* line 194, ../scss/color.scss */
+.white .customer-question {
+  color: #777777;
+}
+/* line 201, ../scss/color.scss */
+.white .one-third:hover .customer-question {
+  transition: color 0.5s ease;
+  color: #666666;
+}
+/* line 210, ../scss/color.scss */
+.white .customer-contact-form {
+  background: #ee3c2d;
+  padding: 1em;
+}
+/* line 215, ../scss/color.scss */
+.white .customer-contact-form h3 {
+  color: white;
+}
+/* line 220, ../scss/color.scss */
+.white .customer-contact-form p {
+  color: white;
+}
+/* line 225, ../scss/color.scss */
+.white .customer-contact-form span {
+  margin: 0 0 0 .5em;
+  color: white;
+  font-size: 1.25em;
+}
+/* line 232, ../scss/color.scss */
+.white .customer-contact-form input {
+  font-size: 1em;
+  color: #666666;
+}
+/* line 238, ../scss/color.scss */
+.white .customer-contact-form textarea {
+  padding: .5em;
+  color: #666666;
+  width: 100%;
+}
+/* line 245, ../scss/color.scss */
+.white .customer-contact-form input[value="submit"] {
+  border: none;
+  font-size: 2em;
+  color: #ee3c2d;
+  height: 40px;
+}
+
+/* line 258, ../scss/color.scss */
+.gray {
+  background: #666666;
+}
+
+/* line 263, ../scss/color.scss */
+.darkgray {
+  background: #333333;
+}
+
+/* line 270, ../scss/color.scss */
+.call-to-action h3, .call-to-action p {
+  color: white;
+}
+
+/* === Footer Specific Colors ===*/
+/* Text Color */
+/* line 282, ../scss/color.scss */
+.darkgray h4 {
+  color: #ee3c2d;
+}
+/* line 287, ../scss/color.scss */
+.darkgray a {
+  color: #dddddd;
+}
+/* line 292, ../scss/color.scss */
+.darkgray a:hover {
+  text-decoration: underline;
+}
+
+/* Background Color */
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 313, ../scss/color.scss */
+  .mobile-inactive {
+    display: none;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 322, ../scss/color.scss */
+  .global-nav a {
+    background: #ee3c2d;
+    color: white;
+  }
+
+  /* line 328, ../scss/color.scss */
+  .client-login a {
+    background: #dddddd;
+    color: #ee3c2d;
+  }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 338, ../scss/color.scss */
+  .global-nav a {
+    background: #ee3c2d;
+    color: white;
+  }
+
+  /* line 344, ../scss/color.scss */
+  .client-login a {
+    background: #dddddd;
+    color: #ee3c2d;
+  }
+}
+/* #Typography
+================================================== */
+/* Global Font and spacing */
+/* line 5, ../scss/type.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: normal;
+}
+
+/* line 11, ../scss/type.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+/* line 15, ../scss/type.scss */
+.subheader {
+  color: #777;
+}
+
+/* line 18, ../scss/type.scss */
+p {
+  margin: 0 0 20px 0;
+}
+
+/* line 23, ../scss/type.scss */
+p img {
+  margin: 0;
+}
+
+/* line 28, ../scss/type.scss */
+p.lead {
+  font-size: 21px;
+  line-height: 27px;
+  color: #777;
+}
+
+/* line 30, ../scss/type.scss */
+em {
+  font-style: italic;
+}
+
+/* line 31, ../scss/type.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 32, ../scss/type.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 35, ../scss/type.scss */
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 2.75em 0 0;
+  height: 0;
+}
+
+/* line 38, ../scss/type.scss */
+body {
+  font: 14px/21px "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Specific Global Font and spacing */
+/* =============== Header Styles === */
+/* line 48, ../scss/type.scss */
+.social-links a {
+  font-size: 1.5em;
+}
+
+/* line 52, ../scss/type.scss */
+.client-login {
+  font-size: 1em;
+}
+
+/* line 58, ../scss/type.scss */
+.global-nav a {
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+}
+
+/* =============== Local Nav Styles === */
+/* line 68, ../scss/type.scss */
+.local-nav ul li ul {
+  margin-left: 1em;
+}
+/* line 73, ../scss/type.scss */
+.local-nav ul li ul li {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============== Body Styles === */
+/* line 86, ../scss/type.scss */
+a {
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+/* line 95, ../scss/type.scss */
+.red h1 {
+  font-size: 3.5em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+/* line 102, ../scss/type.scss */
+.red a {
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+/* line 111, ../scss/type.scss */
+.white h2 {
+  font-size: 3.25em;
+  margin-bottom: .14em;
+  line-height: 1.1em;
+}
+/* line 118, ../scss/type.scss */
+.white h3 {
+  font-size: 3em;
+  line-height: 1.1em;
+  margin-bottom: .14em;
+  font-weight: 600;
+}
+/* line 126, ../scss/type.scss */
+.white h4 {
+  font-size: 1.75em;
+  padding-top: .25em;
+}
+/* line 131, ../scss/type.scss */
+.white p, .white li {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+/* line 136, ../scss/type.scss */
+.white p a, .white li a {
+  font-size: 1em;
+}
+/* line 142, ../scss/type.scss */
+.white .client-contact-submission-success {
+  font-weight: bold;
+}
+
+/* line 151, ../scss/type.scss */
+.gray h2 {
+  font-size: 3.25em;
+  margin-bottom: .14em;
+  line-height: 1.1em;
+}
+/* line 158, ../scss/type.scss */
+.gray h3 {
+  font-size: 2.5em;
+  line-height: 1.1em;
+  margin-bottom: .14em;
+}
+/* line 164, ../scss/type.scss */
+.gray p, .gray li {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+/* line 169, ../scss/type.scss */
+.gray p a, .gray li a {
+  font-size: 1em;
+}
+
+/* line 178, ../scss/type.scss */
+.call-to-action h3 {
+  font-size: 2.25em;
+}
+/* line 182, ../scss/type.scss */
+.call-to-action a {
+  font-size: 1.75em;
+  line-height: 1.3em;
+}
+
+/* line 188, ../scss/type.scss */
+.contact-page .contact-name {
+  font-size: 1.75em;
+}
+
+/* line 194, ../scss/type.scss */
+footer a {
+  font-size: 1em;
+}
+
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 210, ../scss/type.scss */
+  .global-nav a {
+    font-size: 1.75em;
+  }
+
+  /* line 218, ../scss/type.scss */
+  .white h2 {
+    font-size: 3em;
+  }
+  /* line 223, ../scss/type.scss */
+  .white p, .white a {
+    font-size: 1.5em;
+    line-height: 1.3em;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 234, ../scss/type.scss */
+  .mobile-inactive {
+    display: none;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 243, ../scss/type.scss */
+  .global-nav a, .client-login a {
+    font-size: 2em;
+    border: none;
+  }
+
+  /* line 252, ../scss/type.scss */
+  .red h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+
+  /* line 261, ../scss/type.scss */
+  .white h2 {
+    font-size: 3em;
+  }
+  /* line 266, ../scss/type.scss */
+  .white p, .white a {
+    font-size: 1.5em;
+    line-height: 1.3em;
+  }
+
+  /* line 275, ../scss/type.scss */
+  .gray h3 {
+    font-size: 2em;
+    line-height: 1.3em;
+  }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 287, ../scss/type.scss */
+  .global-nav a {
+    font-size: 2em;
+    border: none;
+  }
+
+  /* line 293, ../scss/type.scss */
+  .client-login a {
+    font-size: 1.75em;
+  }
+
+  /* line 301, ../scss/type.scss */
+  .red h1 {
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+
+  /* line 310, ../scss/type.scss */
+  .white h2 {
+    font-size: 1.75em;
+  }
+  /* line 315, ../scss/type.scss */
+  .white h3 {
+    font-size: 2.25em;
+  }
+  /* line 319, ../scss/type.scss */
+  .white p, .white a {
+    font-size: 1.5em;
+    line-height: 1.3em;
+  }
+
+  /* line 328, ../scss/type.scss */
+  .gray h2 {
+    font-size: 2.5em;
+  }
+  /* line 332, ../scss/type.scss */
+  .gray h3 {
+    font-size: 1.75em;
+    line-height: 1.3em;
+  }
+}
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+/* #Site Styles
+================================================== */
+/* line 21, ../scss/layout.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ================================== */
+/* Add top bottom padding to sections */
+/* line 27, ../scss/layout.scss */
+.container {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+/* ================================== */
+/* Adds margin padding to elements inside containers */
+/* ================================================= */
+/* line 38, ../scss/layout.scss */
+.top-space {
+  padding-top: 1em;
+}
+
+/* line 43, ../scss/layout.scss */
+.bottom-space {
+  padding-bottom: 1em;
+}
+
+/* ================================================= */
+/* Manages image floats */
+/* ================================================= */
+/* line 53, ../scss/layout.scss */
+img.right {
+  float: right;
+  padding-left: 1em;
+}
+
+/* line 59, ../scss/layout.scss */
+img.left {
+  float: left;
+  padding-right: 1em;
+}
+
+/* ================================================= */
+/* ============== */
+/* Header Styles */
+/* ============== */
+/* line 71, ../scss/layout.scss */
+.row.top {
+  margin-top: -2em;
+  margin-bottom: -2em;
+}
+
+/* line 79, ../scss/layout.scss */
+header .logo {
+  width: 100%;
+  height: auto;
+}
+/* line 87, ../scss/layout.scss */
+header .social-links {
+  text-align: right;
+  margin-top: 0em;
+}
+/* line 92, ../scss/layout.scss */
+header .social-links a {
+  margin: 0 0 0 .75em;
+  text-decoration: none;
+}
+/* line 100, ../scss/layout.scss */
+header .client-login {
+  margin-top: 1.25em;
+  text-align: center;
+}
+/* line 106, ../scss/layout.scss */
+header .global-nav {
+  margin-top: 5em;
+  /* Needs to be adjusted for smaller screens */
+}
+/* line 110, ../scss/layout.scss */
+header .global-nav a {
+  text-align: center;
+  text-decoration: none;
+  padding-top: .4em;
+  padding-bottom: .4em;
+}
+
+/* ============== */
+/* Body Styles */
+/* ============== */
+/* line 129, ../scss/layout.scss */
+.red a {
+  text-align: center;
+  text-decoration: none;
+  padding: .2em 0;
+}
+
+/* line 139, ../scss/layout.scss */
+.gray h3 {
+  text-align: center;
+}
+/* line 144, ../scss/layout.scss */
+.gray ul {
+  text-align: center;
+}
+/* line 148, ../scss/layout.scss */
+.gray ul li {
+  display: inline;
+  margin: 0 5%;
+}
+/* line 155, ../scss/layout.scss */
+.gray img {
+  width: 100%;
+  margin: 1em 0 0 0;
+}
+
+/* line 163, ../scss/layout.scss */
+.call-to-action {
+  padding: 2em;
+}
+/* line 168, ../scss/layout.scss */
+.call-to-action a {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  float: right;
+}
+
+/* line 180, ../scss/layout.scss */
+.contact-page li {
+  margin: 0;
+}
+
+/* ============== */
+/* Footer Styles */
+/* ============== */
+/* line 193, ../scss/layout.scss */
+.darkgray h4, .darkgray ul {
+  text-align: center;
+}
+/* line 198, ../scss/layout.scss */
+.darkgray img {
+  width: 100%;
+}
+
+/* #Media Queries
+================================================== */
+/* Smaller than standard 960 (devices and browsers) */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 214, ../scss/layout.scss */
+  .global-nav a {
+    margin-top: -1em;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* line 223, ../scss/layout.scss */
+  .mobile-inactive {
+    display: none;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 232, ../scss/layout.scss */
+  img.left, img.right {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  /* line 241, ../scss/layout.scss */
+  .inactive {
+    display: none;
+  }
+
+  /* line 246, ../scss/layout.scss */
+  .client-login {
+    padding-top: 2em;
+  }
+
+  /* line 253, ../scss/layout.scss */
+  .client-login a {
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    padding-top: .25em;
+  }
+
+  /* line 261, ../scss/layout.scss */
+  .global-nav a {
+    height: 40px;
+    border-bottom: 2px solid #fff;
+  }
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* line 271, ../scss/layout.scss */
+  .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  /* line 277, ../scss/layout.scss */
+  .top {
+    padding-top: 1em;
+  }
+
+  /* line 282, ../scss/layout.scss */
+  img.left, img.right {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  /* line 292, ../scss/layout.scss */
+  .inactive {
+    display: none;
+    background: red;
+  }
+
+  /* line 299, ../scss/layout.scss */
+  .client-login {
+    padding-top: 2em;
+  }
+
+  /* line 306, ../scss/layout.scss */
+  .client-login a {
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    padding-top: .5em;
+  }
+
+  /* line 314, ../scss/layout.scss */
+  .global-nav {
+    padding-bottom: 4em;
+  }
+
+  /* line 318, ../scss/layout.scss */
+  .global-nav a {
+    height: 40px;
+    border-bottom: 2px solid #fff;
+  }
+}
+/* #Font-Face
+================================================== */
+/* font-face */
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("../fonts/social_foundicons.eot");
+  src: url("../fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), url("../fonts/social_foundicons.woff") format("woff"), url("../fonts/social_foundicons.ttf") format("truetype"), url("../fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+/* line 7, ../scss/social_foundicons.scss */
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+/* line 17, ../scss/social_foundicons.scss */
+[class*="foundicon-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+/* line 6, ../scss/_settings.scss */
+.foundicon-facebook:before {
+  content: "\f003";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-twitter:before {
+  content: "\f004";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-github:before {
+  content: "\f006";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-linkedin:before {
+  content: "\f008";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-google-plus:before {
+  content: "\f00d";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-youtube:before {
+  content: "\f00e";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-vimeo:before {
+  content: "\f00f";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-flickr:before {
+  content: "\f010";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-slideshare:before {
+  content: "\f011";
+}
+
+/* line 6, ../scss/_settings.scss */
+.foundicon-skype:before {
+  content: "\f013";
+}
+
+/* general icons for IE7 */
+/* line 4, ../scss/social_foundicons_ie7.scss */
+[class*="foundicon-"] {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-thumb-up {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf000;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-thumb-down {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf001;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-rss {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf002;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-facebook {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf003;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-twitter {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf004;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-pinterest {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf005;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-github {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf006;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-path {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf007;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-linkedin {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf008;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-dribbble {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf009;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-stumble-upon {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00a;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-behance {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00b;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-reddit {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00c;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-google-plus {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00d;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-youtube {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00e;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-vimeo {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf00f;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-flickr {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf010;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-slideshare {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf011;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-picassa {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf012;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-skype {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf013;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-steam {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf014;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-instagram {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf015;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-foursquare {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf016;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-delicious {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf017;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-chat {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf018;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-torso {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf019;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-tumblr {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01a;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-video-chat {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01b;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-digg {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01c;");
+}
+
+/* line 12, ../scss/_settings.scss */
+.foundicon-wordpress {
+  *zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf01d;");
+}

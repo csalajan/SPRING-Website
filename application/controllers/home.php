@@ -20,6 +20,7 @@ class Home extends CI_Controller {
 	
 	public function  __construct() {
 		parent::__construct();
+		$this->data = new stdClass;
 		$this->banner = new stdClass;
 		$this->banner->link = false;
 		$this->banner->css = "sixteen columns";
@@ -115,6 +116,24 @@ class Home extends CI_Controller {
 
 			$this->email->send();
 
+			$mailConfig['mailpath'] = "/usr/sbin/sendmail";
+			$mailConfig['protocol'] = 'sendmail';
+			$mailConfig['smtp_host'] = 'smtpout.secureserver.net';
+			$mailConfig['smtp_user'] = 'info@spring215.com';
+			$mailConfig['smtp_pass'] = 'spring215';
+			$mailConfig['smtp_port'] = '465';
+			$mailConfig['mailtype'] = 'html';
+			$this->email->initialize($mailConfig);
+
+			$this->data->client = $data;
+			$message = $this->load->view('email/client-lead-response', $this->data, TRUE);
+
+			$this->email->from('info@spring215.com', 'SPRING Creative Group');
+			$this->email->to($data['customer_email']);
+			$this->email->subject('Thank you for contacting SPRING');
+			$this->email->message($message);
+			$this->email->send();
+
 			$this->load->helper('form');
 			
 			$this->contact = new stdClass;
@@ -162,6 +181,21 @@ class Home extends CI_Controller {
 		$this->load->view('core/banner', $this->banner);
 		$this->load->view('blog');
 		$this->load->view('core/footer');
+	}
+
+	public function error_404() {
+		$this->header->title = "Oops, this page does not exist";
+		$this->header->description = "404 Error";
+
+		$this->banner->css = "sixteen columns offset-by-four alpha subpage-title-bar";
+		$this->banner->div_css = "row red";
+		$this->banner->text = "This page doesn't exist";
+
+		$this->load->view('core/header', $this->header);
+		$this->load->view('core/banner', $this->banner);
+		$this->load->view('errors/404');
+		$this->load->view('core/footer');
+
 	}
 }
 

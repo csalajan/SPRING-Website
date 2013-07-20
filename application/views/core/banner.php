@@ -5,7 +5,7 @@
 		</section>
                 <?php if ($link == true) { ?>
 		<section class="four columns offset-by-eleven">
-			<?php echo anchor('home/services', 'how we can help', array('class' => 'five columns')); ?>
+			<?php echo anchor('services', 'how we can help', array('class' => 'five columns')); ?>
 		</section>
                 <?php } ?>
 	</article>

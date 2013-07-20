@@ -8,7 +8,7 @@
 				<p>
 				<hr>
 				<h3 class="top-space">Our Partners</h3>
-				<p>Support for the Spring Creative Group businesses is provided by a partnership between Washtenaw Community College, SPARK USA, and the Eastern Leaders Group. This support enables SPRING Creative Group businesses to offer creative services at affordable prices while nurturing the next generation of creative service businesses. Together we’re strengthening the business support ecosystem in Southeast Michigan.</p>
+				<p>Support for the Spring Creative Group businesses is provided by a partnership between Washtenaw Community College, Ann Arbor SPARK, and the Eastern Leaders Group. This support enables SPRING Creative Group businesses to offer creative services at affordable prices while nurturing the next generation of creative service businesses. Together we’re strengthening the business support ecosystem in Southeast Michigan.</p>
 			</article>
 		</section>
 	</article>

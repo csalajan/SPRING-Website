@@ -6,6 +6,7 @@
 			<div class="twelve columns profile-section">
 				<h3 class="twelve columns offset-by-one alpha"><?php echo $client->client_name; ?></h3>
 				<a class="edit-clients-button twelve columns offset-by-one alpha bottom-space" href="">EDIT CLIENT</a>
+				<?php echo anchor('admin/archive/1/'.$client->id, 'ARCHIVE CLIENT', array('class' => 'edit-clients-button twelve columns offset-by-one alpha bottom-space')); ?>
 				
 				<?php if ($client->branding == 1) { ?>
 				<div class="twelve columns offset-by-one profile-section-item alpha">

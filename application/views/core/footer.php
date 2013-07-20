@@ -18,9 +18,9 @@
 		<section class="four columns">
 			<h4>Services</h4>
 				<ul>
-					<li><?php echo anchor('home/services', 'Branding'); ?></li>
-					<li><?php echo anchor('home/services', 'Print'); ?></li>
-					<li><?php echo anchor('home/services', 'Web Design'); ?></li>
+					<li><?php echo anchor('services', 'Branding'); ?></li>
+					<li><?php echo anchor('services', 'Print'); ?></li>
+					<li><?php echo anchor('services', 'Web Design'); ?></li>
 				</ul>
 		</section>
 		<section class="four columns">
